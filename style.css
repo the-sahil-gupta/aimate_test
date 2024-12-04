@@ -8,37 +8,43 @@ body {
 	height: 100%;
 	width: 100%;
 	/* font-family: 'gilroy'; */
-	font-family: Arial, Helvetica, sans-serif;
+	/* font-family: Arial, Helvetica, sans-serif; */
+	font-family: Manrope, sans-serif;
 }
 
-.nav-bar {
-	/* min-height: 15vh; */
+#main {
+	height: 100%;
 	width: 100%;
-	padding: 2vh 12vw;
-	position: fixed;
-	top: 0;
+}
+.nav-bar {
+	width: 100%;
+	padding: 16px 160px;
+	/* position: fixed; */
+	/* top: 0; */
+	/* backdrop-filter: blur(8px); */
+	/* border-bottom: 1px solid #333; */
+	/* background-color: #04201ae7; */
+	background-color: #04201a;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	border-bottom: 1px solid #333;
-	backdrop-filter: blur(8px);
-	background-color: #04201ae7;
 }
 
-.logo {
+.nav-logo {
 	display: flex;
 	gap: 4px;
-	color: #fff;
-	/* -webkit-text-stroke-color: white;
-	-webkit-text-stroke-width: 1px; */
+	color: #eff0f0;
+	line-height: 1.2;
 	font-weight: 600;
-	font-size: 5vh;
+	font-size: 34px;
 }
-
+.nav-menu {
+	display: none;
+}
 .nav-links {
 	display: flex;
 	align-items: center;
-	gap: 2vw;
+	gap: 26px;
 }
 
 .nav-link {
@@ -52,35 +58,38 @@ body {
 .nav-buttons {
 	display: flex;
 	align-items: center;
-	gap: 0.5vw;
+	gap: 8px;
 }
 
 .btn-outline {
-	border-radius: 100px;
-	border: 1px solid #666;
+	padding: 12px 24px;
+	border-radius: 200px;
+	border: 1px solid #5f6766;
 	background: transparent;
-	font-size: 1.1vw;
-	padding: 2vh 1.6vw;
+	font-size: 16px;
+	line-height: 1.5;
 	color: #ddd;
 	cursor: pointer;
 }
 
 .btn-primary {
+	border: none;
 	border-radius: 100px;
 	background: #c7bff3;
-	font-size: 1.1vw;
-	padding: 2vh 1.6vw;
+	padding: 12px 24px;
+	font-size: 16px;
+	line-height: 1.5;
 	color: #04201a;
 	cursor: pointer;
 }
 
-.hero-container {
+.hero-section {
+	width: 100%;
 	align-items: center;
-	background: #04201a;
 	display: flex;
 	padding: 112px 160px 192px;
 	flex-direction: column;
-	gap: 56px;
+	background: #04201a;
 }
 
 .hero-content {
@@ -89,37 +98,34 @@ body {
 	max-width: 100%;
 	flex-direction: column;
 	align-items: center;
+	gap: 32px;
 }
 
-.feature-badge {
+.hero-feature {
+	padding: 8px 16px 8px 8px;
 	display: flex;
 	align-items: center;
-	border-radius: 360px;
-	border: 1px solid #5f6766;
-	background: #2a3735;
-	box-shadow: 0 4px 20px 0 #1a2625;
-	padding: 8px 16px 8px 8px;
 	gap: 8px;
+	background-color: #2a3735;
+	border: 1px solid #5f6766;
+	border-radius: 360px;
 	text-align: center;
-	font: 400 14px/2 Manrope, sans-serif;
+	font: 100 14px/1.5 sans-serif;
 }
-
-.notification-pill {
+.feature-new {
+	padding: 3px 12px 3px 8px;
 	display: flex;
 	align-items: center;
 	border-radius: 360px;
 	background: #485151;
-	padding: 2px 12px 2px 8px;
 	gap: 2px;
-	color: #f4f6f6;
+	color: #ddd;
 }
-
-.notification-icon {
+.feature-icons {
 	width: 16px;
 	aspect-ratio: 1;
 	object-fit: contain;
 }
-
 .feature-text {
 	display: flex;
 	align-items: center;
@@ -128,170 +134,104 @@ body {
 }
 
 .hero-text-container {
-	display: flex;
-	margin-top: 32px;
 	width: 100%;
+	display: flex;
 	flex-direction: column;
+	gap: 12px;
 	align-items: center;
 	text-align: center;
 }
-
-.hero-title {
-	color: #f4f6f6;
+.hero-text-title {
+	color: #ddd;
 	font-size: 56px;
-	font-weight: 800;
-	line-height: 67px;
-	letter-spacing: -3px;
+	font-weight: 600;
+	line-height: 1.2;
+	letter-spacing: -2px;
 }
-
-.hero-subtitle {
+.hero-text-subtitle {
 	color: #c5c9c8;
 	font-size: 16px;
-	font-weight: 400;
-	line-height: 24px;
-	margin-top: 12px;
+	font-weight: 100;
+	line-height: 1.5;
 	width: 476px;
+	letter-spacing: 0.2px;
 }
 
-.cta-container {
+.hero-cta-container {
 	display: flex;
-	margin-top: 32px;
 	align-items: center;
 	gap: 8px;
-	color: #f4f6f6;
-	text-align: center;
-	font: 400 16px/2 Manrope, sans-serif;
 }
-
-.primary-button {
-	border-radius: 360px;
+.hero-cta-container .btn-primary {
+	color: #ddd;
 	background: #603ab0;
-	padding: 12px 24px;
-	border: none;
-	color: #f4f6f6;
-	cursor: pointer;
-	transition: background 0.3s ease;
 }
-
-.primary-button:hover {
+.hero-cta-container .btn-primary:hover {
 	background: #7048d5;
 }
-
-.secondary-button {
-	border-radius: 360px;
-	border: 1px solid #5f6766;
-	background: #04201a;
-	padding: 12px 24px;
-	color: #f4f6f6;
-	cursor: pointer;
-	transition: border-color 0.3s ease;
-}
-
-.secondary-button:hover {
+.btn-outline:hover {
 	border-color: #7b8584;
 }
 
-.trust-badge {
+.hero-customer-rating {
 	display: flex;
-	margin-top: 32px;
 	align-items: center;
 	gap: 11px;
 }
-
-.trust-logo {
+.avatars-png {
 	width: 124px;
-	aspect-ratio: 3.1;
-	object-fit: contain;
 }
-
 .rating-container {
 	display: flex;
 	flex-direction: column;
 }
-
 .star-rating {
 	display: flex;
 	gap: 3px;
 }
-
-.star-icon {
+.full-star-icon {
 	width: 16px;
 	aspect-ratio: 1;
 	object-fit: contain;
 }
-
 .rating-text {
 	color: #eff0f0;
 	margin-top: 4px;
-	font: 400 14px/2 Manrope, sans-serif;
+	font: 100 14px/2 Manrope, sans-serif;
 }
 
-@media (max-width: 390) {
+.hero-image-container {
+	height: 0;
+}
+.hero-image-container .hero-img {
+	width: 928px;
+	margin-top: 57px;
+}
+
+@media (max-width: 400px) {
 	.nav-bar {
-		padding: 0;
+		padding: 16px;
 	}
-
-	.logo {
-		white-space: initial;
-	}
-	.hero-container {
-		padding: 60px 16px;
-		gap: 32px;
-	}
-
-	.hero-content {
-		width: 100%;
-	}
-
-	.feature-badge {
-		flex-direction: column;
-		padding: 8px;
-		width: 100%;
-	}
-
-	.hero-title {
-		font-size: 32px;
-		line-height: 40px;
-		letter-spacing: -1px;
-	}
-
-	.hero-subtitle {
-		font-size: 14px;
-		line-height: 20px;
-		width: 100%;
-		padding: 0 16px;
-	}
-
-	.cta-container {
-		flex-direction: column;
-		width: 100%;
-		gap: 12px;
-	}
-
-	.primary-button,
-	.secondary-button {
-		width: 100%;
-		padding: 14px 24px;
-	}
-
-	.trust-badge {
-		flex-direction: column;
-		gap: 16px;
-	}
-
-	.trust-logo {
-		width: 100px;
-	}
-
-	.rating-container {
-		align-items: center;
-	}
-
-	.nav-links {
+	.nav-logo {
 		white-space: initial;
 	}
 	.nav-links,
 	.nav-buttons {
 		display: none;
+	}
+	.nav-menu {
+		display: block;
+	}
+	.hero-section {
+		padding: 56px 16px 112px;
+	}
+	.hero-text-subtitle {
+		font-size: 14px;
+
+		width: 358px;
+	}
+	.hero-image-container .hero-img {
+		width: 358px;
+		margin-top: 56px;
 	}
 }
