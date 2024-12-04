@@ -1,0 +1,297 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html,
+body {
+	height: 100%;
+	width: 100%;
+	/* font-family: 'gilroy'; */
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav-bar {
+	/* min-height: 15vh; */
+	width: 100%;
+	padding: 2vh 12vw;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid #333;
+	backdrop-filter: blur(8px);
+	background-color: #04201ae7;
+}
+
+.logo {
+	display: flex;
+	gap: 4px;
+	color: #fff;
+	/* -webkit-text-stroke-color: white;
+	-webkit-text-stroke-width: 1px; */
+	font-weight: 600;
+	font-size: 5vh;
+}
+
+.nav-links {
+	display: flex;
+	align-items: center;
+	gap: 2vw;
+}
+
+.nav-link {
+	color: #ddd;
+	text-decoration: none;
+}
+.nav-link:hover {
+	color: #fff;
+}
+
+.nav-buttons {
+	display: flex;
+	align-items: center;
+	gap: 0.5vw;
+}
+
+.btn-outline {
+	border-radius: 100px;
+	border: 1px solid #666;
+	background: transparent;
+	font-size: 1.1vw;
+	padding: 2vh 1.6vw;
+	color: #ddd;
+	cursor: pointer;
+}
+
+.btn-primary {
+	border-radius: 100px;
+	background: #c7bff3;
+	font-size: 1.1vw;
+	padding: 2vh 1.6vw;
+	color: #04201a;
+	cursor: pointer;
+}
+
+.hero-container {
+	align-items: center;
+	background: #04201a;
+	display: flex;
+	padding: 112px 160px 192px;
+	flex-direction: column;
+	gap: 56px;
+}
+
+.hero-content {
+	display: flex;
+	width: 736px;
+	max-width: 100%;
+	flex-direction: column;
+	align-items: center;
+}
+
+.feature-badge {
+	display: flex;
+	align-items: center;
+	border-radius: 360px;
+	border: 1px solid #5f6766;
+	background: #2a3735;
+	box-shadow: 0 4px 20px 0 #1a2625;
+	padding: 8px 16px 8px 8px;
+	gap: 8px;
+	text-align: center;
+	font: 400 14px/2 Manrope, sans-serif;
+}
+
+.notification-pill {
+	display: flex;
+	align-items: center;
+	border-radius: 360px;
+	background: #485151;
+	padding: 2px 12px 2px 8px;
+	gap: 2px;
+	color: #f4f6f6;
+}
+
+.notification-icon {
+	width: 16px;
+	aspect-ratio: 1;
+	object-fit: contain;
+}
+
+.feature-text {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	color: #eff0f0;
+}
+
+.hero-text-container {
+	display: flex;
+	margin-top: 32px;
+	width: 100%;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+.hero-title {
+	color: #f4f6f6;
+	font-size: 56px;
+	font-weight: 800;
+	line-height: 67px;
+	letter-spacing: -3px;
+}
+
+.hero-subtitle {
+	color: #c5c9c8;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	margin-top: 12px;
+	width: 476px;
+}
+
+.cta-container {
+	display: flex;
+	margin-top: 32px;
+	align-items: center;
+	gap: 8px;
+	color: #f4f6f6;
+	text-align: center;
+	font: 400 16px/2 Manrope, sans-serif;
+}
+
+.primary-button {
+	border-radius: 360px;
+	background: #603ab0;
+	padding: 12px 24px;
+	border: none;
+	color: #f4f6f6;
+	cursor: pointer;
+	transition: background 0.3s ease;
+}
+
+.primary-button:hover {
+	background: #7048d5;
+}
+
+.secondary-button {
+	border-radius: 360px;
+	border: 1px solid #5f6766;
+	background: #04201a;
+	padding: 12px 24px;
+	color: #f4f6f6;
+	cursor: pointer;
+	transition: border-color 0.3s ease;
+}
+
+.secondary-button:hover {
+	border-color: #7b8584;
+}
+
+.trust-badge {
+	display: flex;
+	margin-top: 32px;
+	align-items: center;
+	gap: 11px;
+}
+
+.trust-logo {
+	width: 124px;
+	aspect-ratio: 3.1;
+	object-fit: contain;
+}
+
+.rating-container {
+	display: flex;
+	flex-direction: column;
+}
+
+.star-rating {
+	display: flex;
+	gap: 3px;
+}
+
+.star-icon {
+	width: 16px;
+	aspect-ratio: 1;
+	object-fit: contain;
+}
+
+.rating-text {
+	color: #eff0f0;
+	margin-top: 4px;
+	font: 400 14px/2 Manrope, sans-serif;
+}
+
+@media (max-width: 390) {
+	.nav-bar {
+		padding: 0;
+	}
+
+	.logo {
+		white-space: initial;
+	}
+	.hero-container {
+		padding: 60px 16px;
+		gap: 32px;
+	}
+
+	.hero-content {
+		width: 100%;
+	}
+
+	.feature-badge {
+		flex-direction: column;
+		padding: 8px;
+		width: 100%;
+	}
+
+	.hero-title {
+		font-size: 32px;
+		line-height: 40px;
+		letter-spacing: -1px;
+	}
+
+	.hero-subtitle {
+		font-size: 14px;
+		line-height: 20px;
+		width: 100%;
+		padding: 0 16px;
+	}
+
+	.cta-container {
+		flex-direction: column;
+		width: 100%;
+		gap: 12px;
+	}
+
+	.primary-button,
+	.secondary-button {
+		width: 100%;
+		padding: 14px 24px;
+	}
+
+	.trust-badge {
+		flex-direction: column;
+		gap: 16px;
+	}
+
+	.trust-logo {
+		width: 100px;
+	}
+
+	.rating-container {
+		align-items: center;
+	}
+
+	.nav-links {
+		white-space: initial;
+	}
+	.nav-links,
+	.nav-buttons {
+		display: none;
+	}
+}
