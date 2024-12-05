@@ -1,21 +1,22 @@
+// Register GSAP ScrollTrigger
 gsap.registerPlugin(ScrollTrigger);
 
-// Using Locomotive Scroll from Locomotive https://github.com/locomotivemtl/locomotive-scroll
-
+// Initialize Locomotive Scroll
 const locoScroll = new LocomotiveScroll({
 	el: document.querySelector('#main'),
 	smooth: true,
 });
-// each time Locomotive Scroll updates, tell ScrollTrigger to update too (sync positioning)
+
+// Sync ScrollTrigger with Locomotive Scroll
 locoScroll.on('scroll', ScrollTrigger.update);
 
-// tell ScrollTrigger to use these proxy methods for the "#main" element since Locomotive Scroll is hijacking things
+// Set up ScrollTrigger to use Locomotive Scroll as the scroller
 ScrollTrigger.scrollerProxy('#main', {
 	scrollTop(value) {
 		return arguments.length
 			? locoScroll.scrollTo(value, 0, 0)
 			: locoScroll.scroll.instance.scroll.y;
-	}, // we don't have to define a scrollLeft because we're only scrolling vertically.
+	},
 	getBoundingClientRect() {
 		return {
 			top: 0,
@@ -24,25 +25,33 @@ ScrollTrigger.scrollerProxy('#main', {
 			height: window.innerHeight,
 		};
 	},
-	// LocomotiveScroll handles things completely differently on mobile devices - it doesn't even transform the container at all! So to get the correct behavior and avoid jitters, we should pin things with position: fixed on mobile. We sense it by checking to see if there's a transform applied to the container (the LocomotiveScroll-controlled element).
 	pinType: document.querySelector('#main').style.transform
 		? 'transform'
 		: 'fixed',
 });
 
-// each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll.
+// Refresh ScrollTrigger on window updates
 ScrollTrigger.addEventListener('refresh', () => locoScroll.update());
 
-// after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+// Initial refresh
 ScrollTrigger.refresh();
 
-// gsap.from('img', {
-// 	scale: 1,
-// 	scrollTrigger: {
-// 		trigger: 'img',
-// 		scroller: 'body',
-// 		markers: true,
-// 		start: 'top 50%',
-// 		// end: "top 50%",
-// 	},
-// });
+// Navbar scroll logic
+document.addEventListener('DOMContentLoaded', () => {
+	const navbar = document.querySelector('.nav-bar');
+	let lastScrollY = 0;
+
+	locoScroll.on('scroll', (obj) => {
+		const currentScrollY = obj.scroll.y;
+
+		if (currentScrollY > lastScrollY) {
+			// Scrolling down
+			navbar.style.transform = 'translateY(-100%)';
+		} else {
+			// Scrolling up
+			navbar.style.transform = 'translateY(0)';
+		}
+
+		lastScrollY = currentScrollY;
+	});
+});
