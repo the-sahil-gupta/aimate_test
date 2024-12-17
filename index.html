@@ -461,8 +461,8 @@
 						</div>
 						<p class="para-14">Save 20% on yearly plan</p>
 					</article>
-					<div class="price-card-container">
-						<div class="price-card">
+					<div id="price" class="price-card-container">
+						<div class="price-card" onclick="setPack('starter')">
 							<div class="card">
 								<img
 									src="./resources/price-card-icon-1.svg"
@@ -490,7 +490,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="price-card">
+						<div class="price-card active" onclick="setPack('individual')">
 							<div class="card">
 								<img
 									src="./resources/price-card-icon-2.svg"
@@ -506,7 +506,7 @@
 							</div>
 							<hr />
 							<div class="card-sec">
-								<h3 class="heading-style-h3">$18/m</h3>
+								<h3 class="heading-style-h3" id="individual-price">$18/m</h3>
 								<button class="btn-outline">Get started</button>
 								<ul class="price-list">
 									<li>5,000 interactions monthly</li>
@@ -518,7 +518,7 @@
 								</ul>
 							</div>
 						</div>
-						<div class="price-card">
+						<div class="price-card" onclick="setPack('business')">
 							<div class="card">
 								<img
 									src="./resources/price-card-icon-3.svg"
@@ -527,22 +527,21 @@
 								<div class="card-text">
 									<h5 class="heading-style-h5">Business plan</h5>
 									<p class="para-16">
-										Ideal for startups and beginners, our Starter Plan is free
-										for starters.
+										Tailored for businesses seeking comprehensive AI solutions.
 									</p>
 								</div>
 							</div>
 							<hr />
 							<div class="card-sec">
-								<h3 class="heading-style-h3">$30/m</h3>
+								<h3 class="heading-style-h3" id="business-price">$30/m</h3>
 								<button class="btn-outline">Get started</button>
 								<ul class="price-list">
 									<li>Unlimited interactions</li>
 									<li>Enhanced knowledge base</li>
 									<li>24/7 priority support</li>
-									<li>Community forum access</li>
-									<li>Single user license</li>
-									<li>Regular updates provided</li>
+									<li>Exclusive webinar access</li>
+									<li>Team collaboration features</li>
+									<li>Daily advanced updates</li>
 								</ul>
 							</div>
 						</div>
