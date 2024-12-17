@@ -655,7 +655,7 @@ body {
 	width: 100%;
 	position: absolute;
 	top: 50%;
-	transform: rotate(12deg);
+	transform: rotate(20deg);
 }
 .f-c-anime-left {
 	animation: rotate 4s linear infinite alternate;
@@ -665,12 +665,12 @@ body {
 }
 @keyframes rotate {
 	to {
-		transform: rotate(168deg);
+		transform: rotate(160deg);
 	}
 }
 @keyframes rev-rotate {
 	from {
-		transform: rotate(168deg);
+		transform: rotate(160deg);
 	}
 }
 .float-icons {
@@ -678,7 +678,7 @@ body {
 	position: absolute;
 	transform: translate(-44%, -50%) rotate(270deg);
 }
-.circle-736 {
+.circle-7360 {
 	width: 736px;
 	height: 736px;
 }
