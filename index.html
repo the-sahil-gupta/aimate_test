@@ -39,7 +39,7 @@
 				<button class="btn-primary">Get started</button>
 			</div>
 		</header>
-		<div id="main">
+		<main id="main">
 			<!-- HERO -->
 			<section class="hero-section">
 				<div class="hero-content">
@@ -247,13 +247,13 @@
 					class="af-image"
 					alt="additional-features-image" />
 				<div class="af-feature-cards">
-					<div class="af-cards-container">
-						<div class="af-card">
+					<div class="cards-container">
+						<div class="card">
 							<img
-								src="./resources/af-icon-card-1.svg"
-								class="af-icon-card"
-								alt="af-icon-card-1" />
-							<div class="af-card-text">
+								src="./resources/card-icon-1.svg"
+								class="card-icon"
+								alt="card-icon-1" />
+							<div class="card-text">
 								<h5 class="heading-style-h5">Conversational Analytics</h5>
 								<p class="para-14">
 									Gain insights into user interactions, improving chatbot
@@ -261,12 +261,12 @@
 								</p>
 							</div>
 						</div>
-						<div class="af-card">
+						<div class="card">
 							<img
-								src="./resources/af-icon-card-2.svg"
-								class="af-icon-card"
-								alt="af-icon-card-2" />
-							<div class="af-card-text">
+								src="./resources/card-icon-2.svg"
+								class="card-icon"
+								alt="card-icon-2" />
+							<div class="card-text">
 								<h5 class="heading-style-h5">Multi-language support</h5>
 								<p class="para-14">
 									Enable the chatbot to communicate seamlessly in multiple
@@ -274,12 +274,12 @@
 								</p>
 							</div>
 						</div>
-						<div class="af-card">
+						<div class="card">
 							<img
-								src="./resources/af-icon-card-3.svg"
-								class="af-icon-card"
-								alt="af-icon-card-3" />
-							<div class="af-card-text">
+								src="./resources/card-icon-3.svg"
+								class="card-icon"
+								alt="card-icon-3" />
+							<div class="card-text">
 								<h5 class="heading-style-h5">Automated workflows</h5>
 								<p class="para-14">
 									Streamline internal processes with automated workflows
@@ -288,13 +288,13 @@
 							</div>
 						</div>
 					</div>
-					<div class="af-cards-container">
-						<div class="af-card">
+					<div class="cards-container">
+						<div class="card">
 							<img
-								src="./resources/af-icon-card-4.svg"
-								class="af-icon-card"
-								alt="af-icon-card-4" />
-							<div class="af-card-text">
+								src="./resources/card-icon-4.svg"
+								class="card-icon"
+								alt="card-icon-4" />
+							<div class="card-text">
 								<h5 class="heading-style-h5">Integration with CRM</h5>
 								<p class="para-14">
 									Seamlessly connect with CRM systems for a comprehensive view
@@ -302,12 +302,12 @@
 								</p>
 							</div>
 						</div>
-						<div class="af-card">
+						<div class="card">
 							<img
-								src="./resources/af-icon-card-5.svg"
-								class="af-icon-card"
-								alt="af-icon-card-5" />
-							<div class="af-card-text">
+								src="./resources/card-icon-5.svg"
+								class="card-icon"
+								alt="card-icon-5" />
+							<div class="card-text">
 								<h5 class="heading-style-h5">Analytics dashboard</h5>
 								<p class="para-14">
 									Provide an intuitive dashboard for real-time performance
@@ -315,12 +315,12 @@
 								</p>
 							</div>
 						</div>
-						<div class="af-card">
+						<div class="card">
 							<img
-								src="./resources/af-icon-card-6.svg"
-								class="af-icon-card"
-								alt="af-icon-card-6" />
-							<div class="af-card-text">
+								src="./resources/card-icon-6.svg"
+								class="card-icon"
+								alt="card-icon-6" />
+							<div class="card-text">
 								<h5 class="heading-style-h5">Smary routing system</h5>
 								<p class="para-14">
 									Automatically direct user queries to the most relevant support
@@ -340,8 +340,8 @@
 						<div class="insights-card-head">
 							<img
 								src="./resources/insights-icon-card-1.svg"
-								class="af-icon-card"
-								alt="af-icon-card-1" />
+								class="card-icon"
+								alt="card-icon-1" />
 							<h2 class="heading-style-h2">100%</h2>
 						</div>
 						<div class="insights-card-text">
@@ -357,8 +357,8 @@
 						<div class="insights-card-head">
 							<img
 								src="./resources/insights-icon-card-2.svg"
-								class="af-icon-card"
-								alt="af-icon-card-1" />
+								class="card-icon"
+								alt="card-icon-1" />
 							<h2 class="heading-style-h2">34%</h2>
 						</div>
 						<div class="insights-card-text">
@@ -374,8 +374,8 @@
 						<div class="insights-card-head">
 							<img
 								src="./resources/insights-icon-card-3.svg"
-								class="af-icon-card"
-								alt="af-icon-card-1" />
+								class="card-icon"
+								alt="card-icon-1" />
 							<h2 class="heading-style-h2">4.8m</h2>
 						</div>
 						<div class="insights-card-text">
@@ -441,7 +441,115 @@
 					</div>
 				</div>
 			</section>
-		</div>
+
+			<!-- PRICING -->
+			<section class="pricing-section">
+				<h2 class="heading-style-h2">Plans for every stage of company</h2>
+				<aside class="pricing-container">
+					<article>
+						<div class="toggle-container">
+							<div id="toggle" class="toggle-btn">
+								<button
+									class="toggle-options active"
+									onclick="setToggle('monthly')">
+									Monthly
+								</button>
+								<button class="toggle-options" onclick="setToggle('yearly')">
+									Yearly
+								</button>
+							</div>
+						</div>
+						<p class="para-14">Save 20% on yearly plan</p>
+					</article>
+					<div class="price-card-container">
+						<div class="price-card">
+							<div class="card">
+								<img
+									src="./resources/price-card-icon-1.svg"
+									class="card-icon"
+									alt="card-icon-1" />
+								<div class="card-text">
+									<h5 class="heading-style-h5">Starter plan</h5>
+									<p class="para-16">
+										Ideal for startups and beginners, our Starter Plan is free
+										for starters.
+									</p>
+								</div>
+							</div>
+							<hr />
+							<div class="card-sec">
+								<h3 class="heading-style-h3">Free</h3>
+								<button class="btn-outline">Get started for free</button>
+								<ul class="price-list">
+									<li>500 interactions monthly</li>
+									<li>Basic knowledge base</li>
+									<li>Email support included</li>
+									<li>Community forum access</li>
+									<li>Single user license</li>
+									<li>Regular updates provided</li>
+								</ul>
+							</div>
+						</div>
+						<div class="price-card">
+							<div class="card">
+								<img
+									src="./resources/price-card-icon-2.svg"
+									class="card-icon"
+									alt="card-icon-1" />
+								<div class="card-text">
+									<h5 class="heading-style-h5">Individual plan</h5>
+									<p class="para-16">
+										Perfect for individual users looking for advanced features
+										and flexibility.
+									</p>
+								</div>
+							</div>
+							<hr />
+							<div class="card-sec">
+								<h3 class="heading-style-h3">$18/m</h3>
+								<button class="btn-outline">Get started</button>
+								<ul class="price-list">
+									<li>5,000 interactions monthly</li>
+									<li>Full knowledge base</li>
+									<li>Priority email support</li>
+									<li>Premium forum access</li>
+									<li>Multi-user capabilities</li>
+									<li>Weekly feature updates</li>
+								</ul>
+							</div>
+						</div>
+						<div class="price-card">
+							<div class="card">
+								<img
+									src="./resources/price-card-icon-3.svg"
+									class="card-icon"
+									alt="card-icon-1" />
+								<div class="card-text">
+									<h5 class="heading-style-h5">Business plan</h5>
+									<p class="para-16">
+										Ideal for startups and beginners, our Starter Plan is free
+										for starters.
+									</p>
+								</div>
+							</div>
+							<hr />
+							<div class="card-sec">
+								<h3 class="heading-style-h3">$30/m</h3>
+								<button class="btn-outline">Get started</button>
+								<ul class="price-list">
+									<li>Unlimited interactions</li>
+									<li>Enhanced knowledge base</li>
+									<li>24/7 priority support</li>
+									<li>Community forum access</li>
+									<li>Single user license</li>
+									<li>Regular updates provided</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</aside>
+			</section>
+		</main>
 		<!-- ScrollTrigger -->
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js"

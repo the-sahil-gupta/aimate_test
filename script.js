@@ -55,3 +55,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		lastScrollY = currentScrollY;
 	});
 });
+function setToggle(option) {
+	const toggleBtn = document.querySelector('#toggle');
+	const options = document.querySelectorAll('.toggle-options');
+	options.forEach((opt, index) =>
+		opt.classList.toggle(
+			'active',
+			option === (index === 0 ? 'monthly' : 'yearly')
+		)
+	);
+}
