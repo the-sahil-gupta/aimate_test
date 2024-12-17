@@ -624,7 +624,6 @@ body {
 	width: 736px;
 	height: 368px;
 	position: relative;
-	/* border-bottom: 1px dashed #c5c9c8; */
 	border-bottom: 1px dashed transparent;
 	border-image: repeating-linear-gradient(
 			to right,
@@ -700,7 +699,6 @@ body {
 .circle-512 .float-carrier {
 	animation-duration: 7s;
 }
-
 .circle-356 {
 	width: 356px;
 	height: 356px;
@@ -749,17 +747,14 @@ body {
 		width: 312px;
 		height: 312px;
 	}
-
 	.circle-512 {
 		width: 256px;
 		height: 256px;
 	}
-
 	.circle-356 {
 		width: 178px;
 		height: 178px;
 	}
-
 	.circle-200 {
 		width: 100px;
 		height: 100px;
