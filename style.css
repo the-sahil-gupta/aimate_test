@@ -775,7 +775,20 @@ body {
 	place-items: center;
 	gap: 56px;
 }
+.pricing-container {
+	display: grid;
+	place-items: center;
+	gap: 45px;
+}
 
+.pricing-container article {
+	display: grid;
+	gap: 12px;
+	text-align: center;
+}
+.pricing-container article .para-14 {
+	color: #603ab0;
+}
 .toggle-container {
 	display: flex;
 	justify-content: center;
@@ -807,20 +820,7 @@ body {
 	color: var(--sec-theme-color);
 	background-color: var(--pri-heading-color);
 }
-.pricing-container {
-	display: grid;
-	place-items: center;
-	gap: 45px;
-}
 
-.pricing-container article {
-	display: grid;
-	gap: 12px;
-	text-align: center;
-}
-.pricing-container article .para-14 {
-	color: #603ab0;
-}
 .price-card-container {
 	display: flex;
 	gap: 32px;
@@ -834,6 +834,7 @@ body {
 	flex-direction: column;
 	gap: 32px;
 	transition: all ease 0.4s;
+	cursor: pointer;
 }
 .price-card .card {
 	background-color: transparent;
