@@ -73,6 +73,9 @@ body {
 	font: 400 14px/1.54 var(--pri-font-family);
 	color: var(--pri-heading-color);
 }
+.drop-shadow {
+	box-shadow: 0px 4px 12px rgb(26, 38, 37, 0.04);
+}
 .btn-outline {
 	padding: 12px 24px;
 	border-radius: 200px;
@@ -123,7 +126,7 @@ body {
 	align-items: center;
 }
 
-.nav-logo {
+.aimate-logo {
 	display: flex;
 	gap: 4px;
 	color: #eff0f0;
@@ -284,7 +287,7 @@ body {
 	.nav-bar {
 		padding: 16px;
 	}
-	.nav-logo {
+	.aimate-logo {
 		font-size: 33px;
 	}
 	.nav-links,
@@ -1270,4 +1273,99 @@ body {
 		background: #603ab0;
 		font-weight: 300;
 	}
+}
+
+/* FOOTER SECTION */
+.footer-section {
+	padding: 0 160px 64px;
+	background-color: var(--pri-theme-color);
+}
+.footer-section .footer-container {
+	padding: 64px;
+	border-radius: 16px;
+	background-color: var(--pri-heading-color);
+	display: grid;
+	gap: 64px;
+}
+.copyright {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-container .para-14,
+.footer-container .para-16,
+.footer-container a {
+	color: var(--sec-heading-color);
+	font-weight: 300;
+}
+.footer-container .heading-style-h6 {
+	color: #fcfcfc;
+	font-weight: 100;
+}
+.copyright .para-14 span {
+	color: #18b188;
+}
+
+.copyright .tandc {
+	display: flex;
+	gap: 24px;
+}
+.copyright .tandc a,
+.footer-container a {
+	text-decoration: none;
+}
+.copyright .tandc a:hover,
+.footer-container a:hover {
+	text-decoration: underline;
+}
+.footer-container .footer-elements {
+	display: flex;
+	align-items: start;
+	justify-content: space-between;
+}
+.footer-elements .footer-elem-left {
+	display: grid;
+	gap: 32px;
+}
+
+.subscribe-container {
+	display: grid;
+	gap: 16px;
+}
+.subscribe-container .enter-email {
+	padding: 4px 4px 4px 16px;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	background-color: #485151;
+	border-radius: 200px;
+	border: 1px solid var(--sec-heading-color);
+}
+.subscribe-container .btn-primary {
+	padding: 8px 16px;
+	font: 400 14px/1.5 var(--pri-font-family);
+}
+.socials {
+	display: flex;
+	gap: 8px;
+}
+.socials .social-logo {
+	background-color: var(--border-color);
+	padding: 11px 12px 7.5px;
+	border-radius: 100px;
+}
+.footer-elem-right {
+	display: grid;
+	gap: 16px;
+}
+.footer-elem-right .footer-list {
+	list-style: none;
+	display: grid;
+	gap: 8px;
+}
+.footer-list li {
+	display: flex;
+	align-items: center;
+	gap: 4px;
 }
