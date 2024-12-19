@@ -1156,3 +1156,56 @@ body {
 		font: 400 16px/1.5 var(--pri-font-family);
 	}
 }
+
+/* FAQS SECTION */
+.faqs-section {
+	padding: 112px 160px;
+}
+.faqs-section .faqs-container {
+	padding: 0 192px;
+	display: grid;
+	gap: 56px;
+}
+.faqs-container .faqs-content {
+	display: grid;
+	gap: 16px;
+}
+.faqs-container .faqs-content .faqs-card {
+	padding: 24px;
+	background-color: var(--ter-theme-color);
+	border-radius: 16px;
+	display: grid;
+	gap: 8px;
+	transition: all 0.5s ease; /* Consistent property order */
+}
+
+.faqs-card .faqs-ques {
+	display: flex;
+	gap: 16px;
+	cursor: pointer;
+}
+.faqs-card .faqs-ques img {
+	transition: all ease 0.4s;
+}
+
+.faqs-card .faqs-ans {
+	color: var(--border-color);
+	opacity: 0.8;
+	padding: 0 28px 0 40px;
+	max-height: 0;
+	overflow: hidden;
+	transition: all ease 0.4s;
+}
+.faqs-card .faqs-ques img.cross {
+	transform: rotate(45deg); /* Rotates the plus icon to look like a cross */
+}
+.faqs-card .faqs-ans.hidden {
+	max-height: 0;
+	padding: 0;
+	opacity: 0; /* Hide visually during transitions */
+}
+
+.faqs-card .faqs-ans:not(.hidden) {
+	max-height: 200px;
+	opacity: 0.8;
+}

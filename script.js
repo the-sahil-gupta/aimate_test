@@ -97,10 +97,29 @@ function setComp(option) {
 		opt.classList.toggle('active', index === position)
 	);
 }
+document.querySelectorAll('.faqs-ques').forEach((ques) => {
+	ques.addEventListener('click', () => {
+		const ans = ques.nextElementSibling;
+		const icon = ques.querySelector('img');
+
+		const isVisible = !ans.classList.contains('hidden');
+
+		document.querySelectorAll('.faqs-ans').forEach((answers) => {
+			answers.classList.add('hidden');
+		});
+		document.querySelectorAll('.faqs-ques img').forEach((plus) => {
+			plus.classList.remove('cross');
+		});
+
+		if (!isVisible) {
+			ans.classList.remove('hidden');
+			icon.classList.add('cross');
+		}
+	});
+});
 
 // let arrofblogs = [
 // 	{ blogid: 1, heading: 'xyz', content: 'abcde', related: [2, 3] },
 // 	{ blogid: 2, heading: 'xjfjf', content: 'dkjhc', related: [3, 4, 5] },
 // 	{ blogid: 3, heading: 'dzcjhos', content: 'dkjhd', related: [4, 5, 6] },
 // ];
-``;
