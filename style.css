@@ -1287,11 +1287,6 @@ body {
 	display: grid;
 	gap: 64px;
 }
-.copyright {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-}
 
 .footer-container .para-14,
 .footer-container .para-16,
@@ -1303,22 +1298,7 @@ body {
 	color: #fcfcfc;
 	font-weight: 100;
 }
-.copyright .para-14 span {
-	color: #18b188;
-}
 
-.copyright .tandc {
-	display: flex;
-	gap: 24px;
-}
-.copyright .tandc a,
-.footer-container a {
-	text-decoration: none;
-}
-.copyright .tandc a:hover,
-.footer-container a:hover {
-	text-decoration: underline;
-}
 .footer-container .footer-elements {
 	display: flex;
 	align-items: start;
@@ -1355,6 +1335,11 @@ body {
 	padding: 11px 12px 7.5px;
 	border-radius: 100px;
 }
+.footer-elem-center {
+	display: flex;
+	gap: 160px;
+	align-items: start;
+}
 .footer-elem-right {
 	display: grid;
 	gap: 16px;
@@ -1368,4 +1353,81 @@ body {
 	display: flex;
 	align-items: center;
 	gap: 4px;
+}
+.copyright {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.copyright .para-14 span {
+	color: #18b188;
+}
+
+.copyright .tandc {
+	display: flex;
+	gap: 24px;
+}
+.copyright .tandc a,
+.footer-container a {
+	text-decoration: none;
+}
+.copyright .tandc a:hover,
+.footer-container a:hover {
+	text-decoration: underline;
+}
+@media (max-width: 600px) {
+	.footer-section {
+		padding: 0 16px 64px;
+	}
+	.footer-section .footer-container {
+		padding: 36px 24px;
+	}
+
+	.copyright {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+	}
+	.footer-container .para-16 {
+		font-size: 16px;
+	}
+	.footer-container .footer-elements {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 36px;
+	}
+
+	.subscribe-container {
+		display: grid;
+		gap: 16px;
+	}
+	.subscribe-container .enter-email {
+		padding: 4px 4px 4px 16px;
+		display: flex;
+		align-items: center;
+		gap: 30px;
+		background-color: #485151;
+		border-radius: 200px;
+		border: 1px solid var(--sec-heading-color);
+	}
+	.subscribe-container .btn-primary {
+		padding: 8px 16px;
+		font: 400 14px/1.5 var(--pri-font-family);
+	}
+	.socials {
+		display: flex;
+		gap: 8px;
+	}
+	.socials .social-logo {
+		background-color: var(--border-color);
+		padding: 11px 12px 7.5px;
+		border-radius: 100px;
+	}
+	.footer-elem-center {
+		display: flex;
+		gap: 40px;
+		align-items: start;
+	}
 }
