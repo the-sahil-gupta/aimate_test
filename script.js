@@ -84,3 +84,23 @@ function setPack(option) {
 		opt.classList.toggle('active', index === position)
 	);
 }
+function setComp(option) {
+	const options = document.querySelectorAll('.test-logo-image');
+
+	let position = 0;
+	if (option === 'capsule') position = 0;
+	if (option === 'spherule') position = 1;
+	if (option === 'galileo') position = 2;
+	if (option === 'segment') position = 3;
+	// Update the slider position
+	options.forEach((opt, index) =>
+		opt.classList.toggle('active', index === position)
+	);
+}
+
+// let arrofblogs = [
+// 	{ blogid: 1, heading: 'xyz', content: 'abcde', related: [2, 3] },
+// 	{ blogid: 2, heading: 'xjfjf', content: 'dkjhc', related: [3, 4, 5] },
+// 	{ blogid: 3, heading: 'dzcjhos', content: 'dkjhd', related: [4, 5, 6] },
+// ];
+``;
