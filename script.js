@@ -123,3 +123,99 @@ document.querySelectorAll('.faqs-ques').forEach((ques) => {
 // 	{ blogid: 2, heading: 'xjfjf', content: 'dkjhc', related: [3, 4, 5] },
 // 	{ blogid: 3, heading: 'dzcjhos', content: 'dkjhd', related: [4, 5, 6] },
 // ];
+
+const blogsCardsArr = [
+	{
+		imgSrc: './resources/blog-card-img-1.png',
+		category: 'Business',
+		date: 'Jan 11, 2024',
+		readTime: '5 min read',
+		title: 'Aimate transforms customer support experiences with AI',
+	},
+	{
+		imgSrc: './resources/blog-card-img-2.png',
+		category: 'Business',
+		date: 'Jan 11, 2024',
+		readTime: '10 min read',
+		title: 'Shaping future of seamless customer interactions with AI',
+	},
+	{
+		imgSrc: './resources/blog-card-img-3.png',
+		category: 'Experience',
+		date: 'Jan 11, 2024',
+		readTime: '5 min read',
+		title: 'How Aimate is revolutionizing overall customer experience',
+	},
+	{
+		imgSrc: './resources/blog-card-img-4.png',
+		category: 'Business',
+		date: 'Jan 11, 2024',
+		readTime: '6 min read',
+		title: 'Understanding the impact of Aimate on business for conversion',
+	},
+	{
+		imgSrc: './resources/blog-card-img-5.png',
+		category: 'Experience',
+		date: 'Jan 11, 2024',
+		readTime: '8 min read',
+		title: 'The growing demand for AI-powered customer support solutions',
+	},
+	{
+		imgSrc: './resources/blog-card-img-6.png',
+		category: 'Business',
+		date: 'Jan 11, 2024',
+		readTime: '5 min read',
+		title: 'How AI chatbots are reshaping the customer service landscape',
+	},
+	{
+		imgSrc: './resources/blog-card-img-7.png',
+		category: 'Growth',
+		date: 'Jan 11, 2024',
+		readTime: '5 min read',
+		title: 'Navigating compliance challenges in the AI customer support sector',
+	},
+	{
+		imgSrc: './resources/blog-card-img-8.png',
+		category: 'Business',
+		date: 'Jan 11, 2024',
+		readTime: '8 min read',
+		title: 'Exploring the latest innovations in AI customer service niche',
+	},
+	{
+		imgSrc: './resources/blog-card-img-9.png',
+		category: 'Market',
+		date: 'Jan 11, 2024',
+		readTime: '5 min read',
+		title: 'Shift towards AI-powered customer service experiences',
+	},
+];
+
+function renderCards(cards) {
+	const parentContainer = document.querySelector('.blogs-page-card-container');
+	parentContainer.innerHTML = '';
+
+	cards.forEach((card) => {
+		const blogsCardDiv = document.createElement('div');
+		blogsCardDiv.className = 'blogs-page-card';
+
+		blogsCardDiv.innerHTML = `
+		<img src="${card.imgSrc}" class="blogs-page-card-img" />
+		<article class="blog-card-content">
+		  <div class="blog-cdr">
+			<p class="para-14 category">${card.category}</p> ·
+			<p class="para-14 date">${card.date}</p> ·
+			<p class="para-14 read">${card.readTime}</p>
+		  </div>
+		  <h5 class="heading-style-h5">${card.title}</h5>
+		</article>
+		<button class="read-more para-16">
+		  Read more
+		  <img src="./resources/right-arrow-black.svg" />
+		</button>
+	  `;
+		parentContainer.appendChild(blogsCardDiv);
+	});
+}
+
+// Call the function to render cards
+renderCards(blogsCardsArr);
