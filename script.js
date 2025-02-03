@@ -190,32 +190,3 @@ const blogsCardsArr = [
 	},
 ];
 
-function renderCards(cards) {
-	const parentContainer = document.querySelector('.blogs-page-card-container');
-	parentContainer.innerHTML = '';
-
-	cards.forEach((card) => {
-		const blogsCardDiv = document.createElement('div');
-		blogsCardDiv.className = 'blogs-page-card';
-
-		blogsCardDiv.innerHTML = `
-		<img src="${card.imgSrc}" class="blogs-page-card-img" />
-		<article class="blog-card-content">
-		  <div class="blog-cdr">
-			<p class="para-14 category">${card.category}</p> ·
-			<p class="para-14 date">${card.date}</p> ·
-			<p class="para-14 read">${card.readTime}</p>
-		  </div>
-		  <h5 class="heading-style-h5">${card.title}</h5>
-		</article>
-		<button class="read-more para-16">
-		  Read more
-		  <img src="./resources/right-arrow-black.svg" />
-		</button>
-	  `;
-		parentContainer.appendChild(blogsCardDiv);
-	});
-}
-
-// Call the function to render cards
-renderCards(blogsCardsArr);
